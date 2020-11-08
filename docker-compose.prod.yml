@@ -2,7 +2,7 @@ version: '3'
 services:
 
   web:
-    container_name: web
+    container_name: web_kylie
     build:
       context: ./
       dockerfile: Dockerfile.prod
@@ -21,7 +21,7 @@ services:
       - config/docker/entrypoint.prod.sh
 
   nginx:
-    container_name: nginx
+    container_name: nginx_kylie
     build: ./config/nginx
     volumes:
       - static:/home/app/web/static
